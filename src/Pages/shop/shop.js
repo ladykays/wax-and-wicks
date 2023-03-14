@@ -13,8 +13,8 @@
 */
 
 import React from 'react';
-import Navbar from '../components/navBar';
-import Footer from '../components/footer';
+// import Navbar from '../components/navBar';
+// import Footer from '../components/footer';
 
 const products = [
     {
@@ -64,7 +64,7 @@ const products = [
 export default function Shop() {
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
             <div className="bg-white">
                 <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
                     <h2 className="text-2xl font-bold tracking-tight text-gray-900">Check out our candle range below</h2>
@@ -96,7 +96,7 @@ export default function Shop() {
                     </div>
                 </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 }
