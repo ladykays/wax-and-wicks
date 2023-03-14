@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Shop from './Pages.js'
+import Shop from './Pages/shop/shop'
 import Basket from "./Pages/basket/basket";
 import Contact from "./Pages/contact/contact";
 
