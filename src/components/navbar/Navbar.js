@@ -12,12 +12,12 @@ export const Navbar = () => {
         </h1>
       </div>
       <div className="links">
-        <Link to="/" className="link mr-8"> Home </Link>
-        <Link to="/shop" className="link mr-8"> Shop </Link>
-        <Link to="/contact" className="link"> Contact </Link>
+        <Link to="/" className="link mr-8 hover:text-gray-700"> Home </Link>
+        <Link to="/shop" className="link mr-8 hover:text-gray-700"> Shop </Link>
+        <Link to="/contact" className="link hover:text-gray-700"> Contact </Link>
       </div>
-      <div>
-        <Link to="/basket">
+      <div className="links">
+        <Link to="/basket" className="link hover:text-gray-700">
           <ShoppingCart size={32} />
         </Link>
       </div>
