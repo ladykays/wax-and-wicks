@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import Shop from './Pages.js'
 import './App.css';
 
 function App() {
