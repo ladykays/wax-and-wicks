@@ -1,32 +1,12 @@
 import React from "react";
 import { makeStyles } from '@mui/styles';
 import { Grid, Typography, Container, Button } from '@mui/material';
-import { Card, CardActionArea, CardActions, CardContent, CardMedia } from '@mui/material';
-
-
-const products = [  
-    {    
-    name: 'Candle 1',    
-    image: 'https://placehold.it/300x200',    
-    description: 'Black Cherry Large Jar Candle'  
-},  
-{    
-    name: 'Candle 2',    
-    image: 'https://placehold.it/300x200',    
-    description: 'Black Cherry Large Jar Candle'  
-}, 
-{    
-    name: 'Candle 3',    
-    image: 'https://placehold.it/300x200',    
-    description: 'Black Cherry Large Jar Candle' 
-}];
-
+import { Card, CardActionArea, CardContent, CardMedia } from '@mui/material';
 const useStyles = makeStyles((theme) => ({
   headerRight: {
     backgroundColor: "#636D5C",
     padding: theme.spacing(4),
     textAlign: "center",
-    alignItems: 'center',
     color: "white",
     marginTop: theme.spacing(4),
     display: 'flex',
@@ -45,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#A75A38",
     padding: theme.spacing(4),
     color: "white",
-    marginTop: theme.spacing(4),
     textAlign: "center",
     display: 'flex',
     alignItems: 'center',
@@ -73,46 +52,59 @@ const useStyles = makeStyles((theme) => ({
     height: '544px',
     margin: '-64px 0 0 0',
   },
-  bestSellers: {
+  bestSeller: {
     backgroundColor: "#F2EBE1",
+    
     padding: theme.spacing(4),
     textAlign: "center",
     display: 'flex',
+    flexDirection: 'column',
     alignItems: 'center',
-    height: '544px',
-    margin: '-64px 0 0 0',
+    height: '1000px',
   },
-  image: {
-    maxWidth: "100%",
-    height: "auto",
+  h2: {
+    marginBottom: theme.spacing(4),
   },
-  button: {
-    marginTop: theme.spacing(2),
-    backgroundColor: "#A75A38 !important",
+  card: {
+    width: 345,
+    marginBottom: theme.spacing(4),
+  },
+  cardMedia: {
+    height: 345,
+  },
+  cardButton: {
+    backgroundColor: "orange !important",
     color: "white",
   },
-  
 }));
-
+  
 export default function Home() {
   const classes = useStyles();
   return (
     <div>
-      <Grid container spacing={4} style={{height: '720px'}}>
-        <Grid item xs={12} md={6}>
-        <img src="https://placehold.it/300x200" alt="candle" className={classes.image}/>
-        </Grid>
-        <Grid item xs={12} md={6} className={classes.headerRight}>
-          <Typography variant="h1" gutterBottom>
+{/* cover section */}
+<Grid container spacing={4} className={classes.headerRight} style={{height: '720px'}}>
+          <Grid item xs={12} md={6}>
+          <img src={require('../../assets/Image1.png')} alt="candle" className={classes.image}/>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Typography variant="h1" gutterBottom>
             Thank you for choosing our candles
-          </Typography>
-          <Typography variant="body1">
-            Here you will find a wide range of hand-poured candles that are made
-            with care and love. Our candles are perfect for creating a relaxing
-            ambiance in your home, or for setting the mood for a special occasion.
-          </Typography>
+            </Typography>
+            <Typography variant="body1">
+              Here you will find a wide range of hand-poured candles that are made
+              with care and love. Our candles are perfect for creating a relaxing
+              ambiance in your home, or for setting the mood for a special occasion.
+            </Typography>
+            <Button variant="contained" className={classes.button} href="/shop">
+              Shop Now
+            </Button>
+          </Grid>
         </Grid>
-      </Grid>
+
+
+
+
 
 {/* Our Story section */}
       <div className={classes.ourStory}>
@@ -131,7 +123,6 @@ export default function Home() {
             </Button>
           </Container>
         </div>
-
 
 {/* Luxury Thank You Gifts section */}
         <Grid container spacing={4} className={classes.repeatHeaderRight} style={{height: '720px'}}>
@@ -152,7 +143,6 @@ export default function Home() {
             </Button>
           </Grid>
         </Grid>
-
 {/* House Warming Gifts section */}
         <Grid container spacing={4} className={classes.repeatHeaderLeft} style={{height: '720px'}}>
         <Grid item xs={12} md={6} order={2}>
@@ -172,49 +162,91 @@ export default function Home() {
             </Button>
         </Grid>
         </Grid>
-
-
-{/* best Sellers section */}
-        <div className={classes.bestSellers}>
+        
+ { /* Best Sellers section */}
+ <div className={classes.bestSeller}>
         <Container>
-            <Typography variant="h2" gutterBottom>
-                Our Best Sellers
+          <Typography variant="h2" gutterBottom>
+            Our Best Sellers
+          </Typography>
+          <Typography variant="body2">
+              Our story text Here you will find a wide range of hand-poured candles
+              that are made with care and love. Our candles are perfect for creating
+              a relaxing ambiance in your home, or for setting the mood for a special
+              occasion.
             </Typography>
-            <Typography variant="body2">
-                "I am blown away by the quality and beauty of these candles. The scents are unique and carefully crafted, and the eco-friendly ingredients are appreciated. The personalized touch and attention to detail truly sets this shop apart. I will be purchasing more candles and recommending to others."
-            </Typography>
-{/* best Sellers grid */}
-            <Grid container spacing={4}>
-                {products.map((product) => (
-                    <Grid item xs={12} sm={6} md={4} key={product.name}>
-                    <Card>
-                        <CardActionArea>
-                            <CardMedia
-                                component="img"
-                                height="140"
-                                image={product.image}
-                                alt={product.name}/>
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
-                                {product.name}
-                                </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                {product.description}
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
 
-                        <CardActions>
-                            <Button variant="contained" className={classes.button} href="/shop">
-                                Shop Now
-                            </Button>
-                        </CardActions>
-                    </Card>
-                </Grid>
-                ))}
+
+
+
+            
+            <Grid container spacing={2} className="grid grid-cols-3">
+            <Grid item>
+                <Card sx={{ maxWidth: 345 }}>
+                    <CardActionArea>
+                        <CardMedia
+                        component="img"
+                        height="140"
+                        image="https://placehold.it/300x200"
+                        alt="green iguana"
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="div">
+                                Black Cherry Large Jar Candle
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica
+                            </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                </Card>
             </Grid>
-        </Container>
-        </div> 
+            <Grid item>
+                <Card sx={{ maxWidth: 345 }}>
+                    <CardActionArea>
+                        <CardMedia
+                        component="img"
+                        height="140"
+                        image="https://placehold.it/300x200"
+                        alt="green iguana"
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="div">
+                                Black Cherry Large Jar Candle
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica
+                            </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                </Card>
+            </Grid>
+            <Grid item>
+                <Card sx={{ maxWidth: 345 }}>
+                    <CardActionArea>
+                        <CardMedia
+                        component="img"
+                        height="140"
+                        image="https://placehold.it/300x200"
+                        alt="green iguana"
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="div">
+                                Black Cherry Large Jar Candle
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica
+                            </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                </Card>
+            </Grid>
+            </Grid>
+     </Container>
+</div>
 
 
 {/* testimonials section */}
@@ -229,16 +261,8 @@ export default function Home() {
             <Typography variant="h3" >
             - Sarah M.            
             </Typography>
-
             </Container>
             </div>   
-
-
-
-
-
-
       </div>
     );
   }
-  
