@@ -6,7 +6,7 @@ import { Footer } from "./components/footer/Footer";
 import Home from "./Pages/home/home"
 import Shop from './Pages/shop/shop'
 import { Basket } from "./Pages/basket/basket";
-import Contact from "./Pages/contact/contact";
+import { Contact } from "./Pages/contact/contact";
 
 
 function App() {
