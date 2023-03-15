@@ -1,0 +1,4 @@
+.list-item {
+  @apply hover:text-amber-600 mr-10
+}
+
