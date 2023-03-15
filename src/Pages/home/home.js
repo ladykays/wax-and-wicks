@@ -7,7 +7,7 @@ function HomePage() {
             <div className="grid md:grid-cols-2 gap-4 items-center">
               <div>
                 <img
-                  src={require("../../assets/images/Image1.png")}
+                  src={require("../../assets/images/image1.png")}
                   alt="candle"
                   className="w-full md:max-w-lg mx-auto"
                 />

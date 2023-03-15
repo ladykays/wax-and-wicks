@@ -1,5 +1,5 @@
 //Faking a jason for our products.
-import product1 from "../src/assets/images/Image1.png";
+import product1 from "../src/assets/images/image1.png";
 
 
 
