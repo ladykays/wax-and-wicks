@@ -1,0 +1,26 @@
+.title {
+  @apply 
+    text-4xl 
+    mt-8 
+    mb-8 
+    text-gray-700
+}
+
+form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+/* All direct child elements of form */
+form > * {
+  padding: 7px 10px;
+  margin-bottom: 7px;
+  border: 1px solid #ccc;
+  outline: none; /* so as not to get a blue outline when we click on the input fields */
+}
+
+form > button {
+  margin: 1rem auto;
+}
