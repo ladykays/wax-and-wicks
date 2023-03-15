@@ -108,7 +108,7 @@ function HomePage() {
                     </Button>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <img src={require('../../assets/images/Image2.png')} alt="candle" className={classes.image}/>
+                    <img src={require('../../assets/images/image2.png')} alt="candle" className={classes.image}/>
                 </Grid>
                 </Grid>
             </Container>
