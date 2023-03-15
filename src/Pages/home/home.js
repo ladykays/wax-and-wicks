@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from '@mui/styles';
 import { Grid, Typography, Container, Button } from '@mui/material';
-import { Card, CardActionArea, CardContent, CardMedia } from '@mui/material';
 import { Box } from '@mui/material';
 
 
@@ -18,9 +17,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
 
-//   card: {
-//     maxWidth: 345,
-//   },
   media: {
     height: 200,
   },
