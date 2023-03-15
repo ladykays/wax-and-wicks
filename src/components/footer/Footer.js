@@ -3,23 +3,23 @@ import "./footer.css"
 
 export const Footer = () => {
   return (
-    <div className="footer w-full mt-10 pt-20 pb-20 bg-stone-100">
+    <div className="footer">
       <div className="flex justify-center">
-        <ul className="flex items-center sm:flex-row flex-col text-md text-amber-900">
+        <ul className="list-group">
           <li className="list-item ">
-           <a href="https://github.com/ladykays">
+           <a href="https://github.com/ladykays" >
             <i class="fa-brands fa-github mr-1"></i>Ladykays</a> 
           </li>
           <li className="list-item ">
-           <a href="https://github.com/Jessie93">
+           <a href="https://github.com/Jessie93" target="_blank" rel="noreferrer">
             <i class="fa-brands fa-github mr-1"></i>Jessie93</a> 
           </li>
           <li className="list-item ">
-           <a href="https://github.com/ffionerin">
+           <a href="https://github.com/ffionerin" target="_blank" rel="noreferrer">
             <i class="fa-brands fa-github mr-1"></i>Ffionerin</a> 
           </li>
           <li className="list-item mr-0">
-           <a href="https://github.com/Temioye">
+           <a href="https://github.com/Temioye" target="_blank" rel="noreferrer">
             <i class="fa-brands fa-github mr-1"></i>Temioye</a> 
           </li>
         </ul>
