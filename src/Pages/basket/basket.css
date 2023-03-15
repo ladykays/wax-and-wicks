@@ -1,0 +1,3 @@
+.buttons-container {
+  @apply  flex sm:flex-row flex-col justify-center items-center
+}
