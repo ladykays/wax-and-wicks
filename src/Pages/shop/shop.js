@@ -10,8 +10,8 @@
 */
 
 import React from "react";
-//import Navbar from "../components/navBar";
-//import Footer from "../components/footer";
+// import Navbar from "../../components/navbar";
+// import Footer from "../components/footer";
 
 const products = [
   {
@@ -62,12 +62,28 @@ export default function Shop() {
   return (
     <>
       {/* <Navbar /> */}
-      <div className="bg-white">
+
+      <div
+            class="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 text-center"
+            style="background-image: url('https://www.themeltco.com/wp-content/uploads/2016/12/The-science-of-relaxation-Why-are-candles-so-calming-.jpg.webp'); height: 300px">
+            <div
+              class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed"
+              style="background-color: rgba(0, 0, 0, 0.6)">
+              <div class="flex h-full items-center justify-center">
+                <div class="text-white">
+                  <h2 class="mb-4 text-4xl font-semibold">Thank you for choosing our candles</h2>
+                  <h4 class="mb-6 text-xl font-semibold">Here you will find a rang of hand-poured candles made with care and love</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white">
         <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+
           <h2 className="text-2xl font-bold tracking-tight text-gray-900">
             Check out our candle range below
           </h2>
-
           <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
             {products.map((product) => (
               <div key={product.id} className="group relative">
