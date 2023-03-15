@@ -1,0 +1,15 @@
+.navbar {
+  @apply 
+    flex 
+    justify-between 
+    items-center 
+    p-6 
+    text-amber-900 
+    bg-orange-50
+}
+
+.link {
+  @apply 
+    mr-8 
+    hover:text-amber-600
+}

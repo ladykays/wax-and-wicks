@@ -1,10 +1,22 @@
 .footer {
-  @apply  w-full mt-10 pt-20 pb-20 bg-stone-100
+  @apply  
+    w-full 
+    mt-10 
+    pt-20 
+    pb-20 
+    bg-stone-100
 }
 .list-group {
-  @apply flex items-center sm:flex-row flex-col text-amber-900
+  @apply 
+    flex 
+    items-center 
+    sm:flex-row 
+    flex-col 
+    text-amber-900
 }
 .list-item {
-  @apply hover:text-amber-600 mr-10
+  @apply 
+    hover:text-amber-600 
+    mr-10
 }
 
