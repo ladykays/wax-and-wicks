@@ -1,12 +1,52 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const theme = createTheme({
+  palette: {
+    primary:{
+      main: "#A75A38"
+    },
+  },
+
+  typography:{
+    h1:{
+      fontSize: "3rem",
+      fontWeight: 600,
+    },
+    h2:{
+      fontSize: "2.5rem",
+      fontWeight: 600,
+    },
+    h3:{
+      fontSize: "1.25rem",
+      fontWeight: 400,
+    },
+    h4:{
+      fontSize: "1.25rem",
+      fontWeight: 300,
+    },
+    body1: {
+      fontSize: "1rem", 
+      fontWeight: 100,
+      color: "white"
+    },
+    body2: {
+      fontSize: "1rem", 
+      fontWeight:100,
+      color: "#636D5C"
+    },
+    
+  }
+});
+
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
-
