@@ -4,7 +4,7 @@ import { Grid, Typography, Container, Button } from '@mui/material';
 import { Box } from '@mui/material';
 
 
-
+// import './home.css';
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -48,6 +48,7 @@ function HomePage() {
     {/* Creates a box container from MUI. it sets the background colour and width. */}
         <Box sx={{ backgroundColor: '#636D5C', width: '100%' }}>
     {/* component limits the maximum width of the content inside this section. */}
+             {/* <Container maxWidth="lg" className= "section, bgGreen"> */}
              <Container maxWidth="lg" className={`${classes.section} ${classes.bgGreen}`}>
                 <Grid container spacing={4} alignItems="center">
     {/* this creates a grid so that i can contain the image and text. */}
@@ -55,7 +56,7 @@ function HomePage() {
                     <img src={require('../../assets/Image1.png')} alt="candle" className={classes.image}/>
                 </Grid>
                 <Grid item xs={12} md={6} style={{ textAlign: 'left' }}>
-                    <Typography variant="h1" gutterBottom>
+                    <Typography variant="h1" className="text-white" gutterBottom>
                     Thank you for choosing our candles
                     </Typography>
                     <Typography variant="body1">
@@ -84,7 +85,7 @@ function HomePage() {
                     a relaxing ambiance in your home, or for setting the mood for a special
                     occasion.
                 </Typography>
-                <Button variant="contained" className={classes.button} href="/shop">
+                <Button variant="contained" className="button py-3 px-10"  href="/shop">
                     Shop Now
                 </Button>
             </Container>
@@ -95,7 +96,7 @@ function HomePage() {
             <Container maxWidth="lg" className={`${classes.section} ${classes.bgTan}`}>
                 <Grid container spacing={4} alignItems="center">
                 <Grid item xs={12} md={6} style={{ textAlign: 'right' }}>
-                    <Typography variant="h2" gutterBottom>
+                    <Typography variant="h2" className="text-white" gutterBottom>
                     House Warming Gifts
                     </Typography>
                     <Typography variant="body1">
@@ -122,7 +123,7 @@ function HomePage() {
                 <img src={require('../../assets/Image1.png')} alt="candle" className={classes.image}/>
                 </Grid>
                 <Grid item xs={12} md={6} style={{ textAlign: 'left' }}>
-                <Typography variant="h2" gutterBottom>
+                <Typography variant="h2" className="text-white" gutterBottom>
                     Luxury Thank You Gifts
                 </Typography>
                 <Typography variant="body1">
@@ -141,15 +142,15 @@ function HomePage() {
 
         
 {/* Testimonial */}
-        <Box sx={{ backgroundColor: '#F2EBE1', width: '100%' }}>
-            <Container maxWidth="lg" className={`${classes.section} ${classes.bgCream}`}>
-            <Typography variant="h2" align="center" >
+        <Box sx={{ backgroundColor: '#636D5C', width: '100%' }}>
+            <Container maxWidth="lg" className={`${classes.section} ${classes.bgGreen}`}>
+            <Typography variant="h2" className="text-white" align="center" >
                 Testimonial
             </Typography>
-            <Typography variant="body2" gutterBottom align="center">
+            <Typography variant="body1" gutterBottom align="center">
                 “I am blown away by the quality and beauty of these candles. The scents are unique and carefully crafted, and the eco-friendly ingredients are appreciated. The personalized touch and attention to detail truly sets this shop apart. I will be purchasing more candles and recommending to others.”
             </Typography>
-            <Typography variant="h3">
+            <Typography variant="h3" className="text-white">
                 - Sarah M.      
             </Typography>
             </Container>
@@ -159,4 +160,3 @@ function HomePage() {
   }
   
   export default HomePage;
-
