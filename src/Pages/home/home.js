@@ -4,27 +4,27 @@ import { products } from "../../products"; // import the products data
 import { Link } from "react-router-dom";
 
 function HomePage() {
-  return (
-    <section>
-      <article>
-       {/* Custom colour for background found in home.css */}
+return (
+<section>
+<article>
+      {/* Custom colour for background found in home.css */}
         <div className="bg-custGreen">
-         {/* container mx-auto sets left and right margin to auto. PY padding top. PX padding left and right. md:px for medium screen */}
+          {/* container mx-auto sets left and right margin to auto. PY padding top. PX padding left and right. md:px for medium screen */}
           <div className="container mx-auto py-16 px-4 md:px-0 grid md:grid-cols-2 gap-4 items-center text-left">
             {/* md:grid-col-2 gives the grid with 2 columns. gap-4 space between items. items center and text left - put content in the center to the left */}
             <img src={require("../../assets/Image1.png")}  alt="candle" className="w-full md:max-w-lg mx-auto rounded-md"/>
-            <div>
-              <h1 className="text-white text-4xl font-bold mb-4"> Thank you for choosing our candles </h1>
-              <p className="text-white text-lg mb-8">
+          <div>
+                <h1 className="text-white text-4xl font-bold mb-4"> Thank you for choosing our candles </h1>
+                <p className="text-white text-lg mb-8">
                 Thank you for choosing Wax and Wicks for your candle needs! Shop
                 our collection today and indulge in the warmth and comfort of
                 Wax and Wicks.
-              </p>
+                </p>
               <Link to="/shop"> <button> Shop Now </button> </Link>
-            </div>
+              </div>
           </div>
         </div>
-      </article>
+</article>
   
 {/* Our Story */}
 <article>
@@ -69,7 +69,7 @@ function HomePage() {
         Welcome friends and family to their new home with a unique and thoughtful housewarming gift from our collection. Our best-selling candles are the perfect way to warm up any new space with their beautiful scents and cozy glow.
         </p>
         <Link to="/shop"> <button> Shop Now </button> </Link>      
-        </div>
+      </div>
     </div>
   </div>
 </article>
@@ -82,12 +82,11 @@ function HomePage() {
             Looking for the best candles around? Look no further than our top-selling candle collection. With a wide variety of scents to choose from, our candles are handcrafted with care and made from high-quality materials to ensure a long-lasting burn. Whether you prefer sweet and fruity or fresh and floral, we have a scent that will fit your mood and brighten your space. Shop our best sellers today and discover the magic of our candles for yourself!
             </p>
 {/* Best Sellers candles */}
-
   <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
     <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
       {/* This products function is looping throght the first 4 items  */}
     {products.slice(0, 4).map((product) => (
-              <div key={product.id} className="group relative">
+        <div key={product.id} className="group relative">
         <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
           <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-object-cover object-center lg:h-full lg:w-full" />
         </div>
