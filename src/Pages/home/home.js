@@ -4,31 +4,27 @@ import "../../index.css"
 const products = [
   {
     id: 1,
-    name: 'Basic Tee',
-    href: '#',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-    imageAlt: "Front of men's Basic Tee in black.",
+    name: "Vanilla Candle",
+    imageSrc: 'https://images.unsplash.com/photo-1603006905003-be475563bc59?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
+    imageAlt: "Photo of a XX",
   },
   {
     id: 2,
-    name: 'Basic Tee',
-    href: '#',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-    imageAlt: "Front of men's Basic Tee in black.",
+    name: "Lavender Candle",
+    imageSrc: 'https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
+    imageAlt: "Photo of a XX",
   },
   {
     id: 3,
-    name: 'Basic Tee',
-    href: '#',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-    imageAlt: "Front of men's Basic Tee in black.",
+    name: "Cedarwood Candle",
+    imageSrc: 'https://images.unsplash.com/photo-1612293905607-b003de9e54fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
+    imageAlt: "Photo of a XX",
   },
   {
-    id: 4,
-    name: 'Basic Tee',
-    href: '#',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-    imageAlt: "Front of men's Basic Tee in black.",
+    id: 3,
+    name: "Cedarwood Candle",
+    imageSrc: 'https://images.unsplash.com/photo-1612293905607-b003de9e54fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
+    imageAlt: "Photo of a XX",
   },
 ]
 
@@ -55,8 +51,6 @@ function HomePage() {
                   relaxing ambiance in your home, or for setting the mood for a
                   special occasion.
                 </p>
-                {/* shop button */}
-                {/* <a href="/shop" className="button" > Shop Now </a> */}
                 <button> Shop Now </button>
               </div>
             </div>
@@ -67,15 +61,13 @@ function HomePage() {
 {/* Our Story */}
         <div className="bg-custCream">
           <div className="container mx-auto py-16 px-4 md:px-0">
-            <h2 className="text-4xl font-bold mb-4">Our Story</h2>
-            <p className="text-lg mb-8">
+            <h2 className="text-4xl font-bold mb-4 text-custGreen">Our Story</h2>
+            <p className="text-lg mb-8 text-custGreen">
               Our story text Here you will find a wide range of hand-poured
               candles that are made with care and love. Our candles are perfect
               for creating a relaxing ambiance in your home, or for setting the
               mood for a special occasion.
             </p>
-            {/* <a href="/shop" className="bg-green-700 text-white font-bold py-4 px-8 rounded-full transition duration-300 hover:bg-white hover:text-green-700"> Shop Now </a> */}
-            <button> Shop Now </button>
           </div>
         </div>
 
@@ -95,7 +87,6 @@ function HomePage() {
                 relaxing ambiance in your home, or for setting the mood for a
                 special occasion.
               </p>
-              {/* <a href="/shop" className="bg-white text-green-700 font-bold py-4 px-8 rounded-full transition duration-300 hover:bg-green-700 hover:text-white"> Shop Now </a> */}
               <button> Shop Now </button>
             </div>
             <div className="order-1 md:order-2">
@@ -134,8 +125,8 @@ function HomePage() {
 {/* Best Sellers */}
         <div className="bg-custCream">
           <div className="container mx-auto py-16 px-4 md:px-0">
-            <h2 className="text-4xl font-bold mb-4">Our Story</h2>
-            <p className="text-lg mb-8">
+            <h2 className="text-4xl font-bold mb-4 text-custGreen">Our Best Sellers</h2>
+            <p className="text-lg mb-8 text-custGreen">
               Our story text Here you will find a wide range of hand-poured
               candles that are made with care and love. Our candles are perfect
               for creating a relaxing ambiance in your home, or for setting the
