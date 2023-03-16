@@ -1,7 +1,4 @@
 //Faking a jason for our products.
-import product1 from "../src/assets/images/Image1.png";
-
-
 
 export const products = [
   {
