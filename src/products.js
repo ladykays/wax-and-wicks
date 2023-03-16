@@ -1,8 +1,3 @@
-//Faking a jason for our products.
-import product1 from "../src/assets/images/Image1.png";
-
-
-
 export const products = [
   {
     id: 1,
@@ -35,7 +30,7 @@ export const products = [
   {
     id: 5,
     name: "Red Apple Candle",
-    imageSrc: product1,
+    imageSrc: 'https://images.unsplash.com/photo-1508093989287-061d64de7324?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80',
     imageAlt: "Photo of a Red Apple candle",
     price: "£7.99",
   },
@@ -56,8 +51,13 @@ export const products = [
   {
     id: 8,
     name: "Cinammon Candle",
-    imageSrc: product1,
+    imageSrc: 'https://images.unsplash.com/photo-1572726729207-a78d6feb18d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
     imageAlt: "Photo of a cinammon Candle",
     price: "£7.99",
   },
 ];
+
+
+
+
+

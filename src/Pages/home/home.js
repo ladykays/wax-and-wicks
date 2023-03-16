@@ -1,30 +1,30 @@
 import "./home2.css"
 import "../../index.css"
 import { products } from "../../products"; // import the products data
-
+import { Link } from "react-router-dom";
 
 function HomePage() {
-return (
-<section>
-
-{/* Heading Section */}
-<article>
-      {/* Custom colour for background found in home.css */}
-        <div className="bg-custGreen ">
-          {/* container mx-auto sets left and right margin to auto. PY padding top. PX padding left and right. md:px for medium screen */}
+  return (
+    <section>
+      <article>
+       {/* Custom colour for background found in home.css */}
+        <div className="bg-custGreen">
+         {/* container mx-auto sets left and right margin to auto. PY padding top. PX padding left and right. md:px for medium screen */}
           <div className="container mx-auto py-16 px-4 md:px-0 grid md:grid-cols-2 gap-4 items-center text-left">
             {/* md:grid-col-2 gives the grid with 2 columns. gap-4 space between items. items center and text left - put content in the center to the left */}
-                <img src={require("../../assets/Image1.png")} alt="candle" className="w-full md:max-w-lg mx-auto rounded-md"/>
-          <div>
-                <h1 className="text-white text-4xl font-bold mb-4"> Thank you for choosing our candles </h1>
-                <p className="text-white text-lg mb-8">
-                Thank you for choosing Wax and Wicks for your candle needs! Shop our collection today and indulge in the warmth and comfort of Wax and Wicks.
-                </p>
-                <button> Shop Now </button>
-              </div>
+            <img src={require("../../assets/Image1.png")}  alt="candle" className="w-full md:max-w-lg mx-auto rounded-md"/>
+            <div>
+              <h1 className="text-white text-4xl font-bold mb-4"> Thank you for choosing our candles </h1>
+              <p className="text-white text-lg mb-8">
+                Thank you for choosing Wax and Wicks for your candle needs! Shop
+                our collection today and indulge in the warmth and comfort of
+                Wax and Wicks.
+              </p>
+              <Link to="/shop"> <button> Shop Now </button> </Link>
+            </div>
           </div>
         </div>
-</article>
+      </article>
   
 {/* Our Story */}
 <article>
@@ -47,7 +47,7 @@ return (
               <p className="text-white text-lg mb-8">
               Show your appreciation in the most luxurious way possible with our collection of exquisite thank-you gifts. Indulge your loved ones with our high-quality, handcrafted candles in a variety of alluring scents. Made with the finest ingredients, these candles will create an ambiance of sophistication and relaxation that is sure to impress. Shop now and give a gift that will be cherished and remembered for years to come.
               </p>
-              <button> Shop Now </button>
+              <Link to="/shop"> <button> Shop Now </button> </Link>
             </div>
             <div className="order-1 md:order-2">
               <img src={require("../../assets/images/Image2.png")} alt="candle" className="w-full md:max-w-lg mx-auto rounded-md"/>
@@ -68,13 +68,13 @@ return (
         <p className="text-white text-lg mb-8">
         Welcome friends and family to their new home with a unique and thoughtful housewarming gift from our collection. Our best-selling candles are the perfect way to warm up any new space with their beautiful scents and cozy glow.
         </p>
-        <button> Shop Now </button>
-      </div>
+        <Link to="/shop"> <button> Shop Now </button> </Link>      
+        </div>
     </div>
   </div>
 </article>
 
-{/* Best Sellers */}
+{/* Best Sellers section*/}
         <div className="bg-custCream">
           <div className="container mx-auto py-16 px-4 md:px-0">
             <h2 className="text-4xl font-bold mb-4 text-custGreen">Our Best Sellers</h2>
@@ -84,10 +84,10 @@ return (
 {/* Best Sellers candles */}
 
   <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-
     <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-        {products.map((product) => (
-        <div key={product.id} className="group relative">
+      {/* This products function is looping throght the first 4 items  */}
+    {products.slice(0, 4).map((product) => (
+              <div key={product.id} className="group relative">
         <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
           <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-object-cover object-center lg:h-full lg:w-full" />
         </div>
@@ -102,7 +102,6 @@ return (
               <p className="mt-1 text-sm text-gray-500">{product.color}</p>
               </div>
               <p className="text-sm font-medium text-gray-900">{product.price}</p>
-              {/* <button onClick={() => handleAddToBasket(product)}>Add to Basket</button> */}
               </div>
             </div>
           ))}
