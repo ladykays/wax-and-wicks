@@ -1,5 +1,3 @@
-//Faking a jason for our products.
-
 export const products = [
   {
     id: 1,
