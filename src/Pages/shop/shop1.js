@@ -27,7 +27,7 @@ return (
     <div
       className="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 text-center"
       style={{
-        backgroundImage: "url('https://www.themeltco.com/wp-content/uploads/2016/12/The-science-of-relaxation-Why-are-candles-so-calming-.jpg.webp')",
+        backgroundImage: "url('https://images.unsplash.com/photo-1602523961358-f9f03dd557db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')",
         height: "300px"
       }}
     >
@@ -37,7 +37,7 @@ return (
       >
         <div className="flex h-full items-center justify-center">
           <div className="text-white">
-            <h2 className="mb-4 text-4xl font-semibold">Thank you for choosing our candles</h2>
+            <h2 className="mb-4 text-4xl font-semibold">Indulge in the warmth and comfort of Wax and Wicks.</h2>
             <h4 className="mb-6 text-xl font-semibold">Here you will find a range of hand-poured candles made with care and love</h4>
           </div>
         </div>
@@ -48,7 +48,7 @@ return (
       <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
 
         <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-          Check out our candle range below
+          Check out our current candle range below
         </h2>
         <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           {products.map((product) => (
