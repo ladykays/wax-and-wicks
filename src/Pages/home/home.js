@@ -68,13 +68,13 @@ function HomePage() {
 
 
 
-{/* Luxury Gifts */}
+{/* Thank You Gifts */}
         <div className="bg-custOrange">
         <div className="container mx-auto py-16 px-4 md:px-0">
           <div className="grid md:grid-cols-2 gap-4 items-center text-right">
             <div className="order-2 md:order-1">
               <h1 className="text-white text-4xl font-bold mb-4">
-                Luxury Thank You Gifts
+              Thank You Gifts
               </h1>
               <p className="text-white text-lg mb-8">
               Show your appreciation in the most luxurious way possible with our collection of exquisite thank-you gifts. Indulge your loved ones with our high-quality, handcrafted candles in a variety of alluring scents. Made with the finest ingredients, these candles will create an ambiance of sophistication and relaxation that is sure to impress. Shop now and give a gift that will be cherished and remembered for years to come.
