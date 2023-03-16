@@ -74,7 +74,7 @@ function HomePage() {
   </div>
 </article>
 
-{/* Best Sellers */}
+{/* Best Sellers section*/}
         <div className="bg-custCream">
           <div className="container mx-auto py-16 px-4 md:px-0">
             <h2 className="text-4xl font-bold mb-4 text-custGreen">Our Best Sellers</h2>
