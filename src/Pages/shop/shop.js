@@ -49,3 +49,6 @@ export const Shop = () => {
     </div>
   );
 };
+
+
+
