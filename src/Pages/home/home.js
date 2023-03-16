@@ -1,32 +1,6 @@
 import "./home2.css"
 import "../../index.css"
-
-const products = [
-  {
-    id: 1,
-    name: "Vanilla Candle",
-    imageSrc: 'https://images.unsplash.com/photo-1603006905003-be475563bc59?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
-    imageAlt: "Photo of a XX",
-  },
-  {
-    id: 2,
-    name: "Lavender Candle",
-    imageSrc: 'https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
-    imageAlt: "Photo of a XX",
-  },
-  {
-    id: 3,
-    name: "Cedarwood Candle",
-    imageSrc: 'https://images.unsplash.com/photo-1612293905607-b003de9e54fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
-    imageAlt: "Photo of a XX",
-  },
-  {
-    id: 3,
-    name: "Cedarwood Candle",
-    imageSrc: 'https://images.unsplash.com/photo-1612293905607-b003de9e54fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
-    imageAlt: "Photo of a XX",
-  },
-]
+import { products } from "../../products"; // import the products data
 
 
 function HomePage() {
@@ -156,7 +130,7 @@ function HomePage() {
               <p className="text-lg text-white mb-8">
                 "I am blown away by the quality and beauty of these candles. The scents are unique and carefully crafted, and the eco-friendly ingredients are appreciated. The personalized touch and attention to detail truly sets this shop apart. I will be purchasing more candles and recommending to others."
                </p>
-               <p className="text-white"> - Sarah M. </p>
+               <p className="text-white font-bold"> - Sarah M. </p>
 
           </div>
         </div>
