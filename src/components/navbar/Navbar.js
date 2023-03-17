@@ -21,16 +21,13 @@ export const Navbar = () => {
         <nav className={`${open ? "block" : "hidden"} navLinks links`}>
           <div className="lg:flex lg:justify-between">
             <Link to="/" className="link">
-              {" "}
-              Home{" "}
+              Home
             </Link>
             <Link to="/shop" className="link">
-              {" "}
-              Shop{" "}
+              Shop
             </Link>
             <Link to="/contact" className="link">
-              {" "}
-              Contact{" "}
+              Contact
             </Link>
           </div>
           <div className="links lg:hidden">
