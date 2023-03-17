@@ -22,6 +22,11 @@
   @apply
     /* mr-8  */
     hover:text-amber-600
+    lg:px-5
+    py-2
+    w-auto
+    text-right
+    block
 }
 
 .basketLink {
