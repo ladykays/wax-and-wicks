@@ -1,5 +1,6 @@
 import React from "react";
 import "./basket.css";
+import { Link } from "react-router-dom";
 
 export const Basket = () => {
   return (
@@ -8,8 +9,11 @@ export const Basket = () => {
 
       <div className="checkout flex sm:flex-row flex-col justify-center items-center">
         <button className="btn mr-4">Continue Shopping</button>
-        <button className="btn">Checkout</button>
+        <Link to="/checkout">
+          {" "}
+          <button className="btn">Checkout</button>{" "}
+        </Link>
       </div>
     </div>
-  )
-}
+  );
+};
