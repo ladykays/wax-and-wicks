@@ -1,19 +1,19 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { products } from "../../products";
 import { ShopContext } from "../../context/shop-context";
-import {BasketItem} from "./basket-item";
+import { BasketItem } from "./basket-item";
 import "./basket.css";
-//we use this hook to navigate back to the shopping page when we click on continue shopping 
 
 
 export const Basket = () => {
 
-  const { basketItems} = useContext(ShopContext);
+  const { basketItems } = useContext(ShopContext);
 
 
   return (
     <div className="basket">
-      <div>
+      <div className="title">
         <h1>Your Shopping Basket</h1>
       </div>
       <div className="basketItems">
@@ -28,8 +28,12 @@ export const Basket = () => {
       </div>
 
       <div className="checkout flex sm:flex-row flex-col justify-center items-center mt-10">
+      <Link to="/shop">
         <button className="btn mr-4">Continue Shopping</button>
+      </Link>
+      <Link to="/checkout">
         <button className="btn">Checkout</button>
+      </Link>
       </div>
      
     </div>
