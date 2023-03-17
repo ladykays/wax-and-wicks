@@ -13,9 +13,23 @@ const getDefaultBasket = () => {
   return basket;
 };
 
+
 //Define state and everything related to logic in the project
 export const ShopContextProvider = (props) => {
   const [basketItems, setBasketItems] = useState(getDefaultBasket());
+
+
+//To get total amount for items in the shopping basket
+const getTotalBasketAmt = () => {
+  let totalAmt = 0;
+  for (const item in basketItems) {
+    if (basketItems[item] > 0) {
+      let itemInfo = products.find((product) => product.id === Number(item));
+      totalAmt += basketItems[item] * itemInfo.price
+    }
+  }
+  return totalAmt;
+};
 
   //Add product to basket
   const addToBasket = (productId) => {
@@ -37,6 +51,7 @@ export const ShopContextProvider = (props) => {
     addToBasket,
     removeFromBasket,
     updateBasketItemCount,
+    getTotalBasketAmt
   }
   
   console.log(basketItems);

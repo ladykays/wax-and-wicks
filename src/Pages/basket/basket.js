@@ -8,7 +8,8 @@ import "./basket.css";
 
 export const Basket = () => {
 
-  const { basketItems } = useContext(ShopContext);
+  const { basketItems, getTotalBasketAmt} = useContext(ShopContext);
+  const totalAmt = getTotalBasketAmt();
 
 
   return (
@@ -27,15 +28,19 @@ export const Basket = () => {
         })}
       </div>
 
-      <div className="checkout flex sm:flex-row flex-col justify-center items-center mt-10">
-      <Link to="/shop">
-        <button className="btn mr-4">Continue Shopping</button>
-      </Link>
-      <Link to="/checkout">
-        <button className="btn">Checkout</button>
-      </Link>
-      </div>
-     
+      {totalAmt > 0 ? (
+        <div className="checkout flex sm:flex-row flex-col justify-center items-center mt-10">
+          <div>Total: £{totalAmt}</div>
+          <Link to="/shop">
+            <button className="btn mr-4">Continue Shopping</button>
+          </Link>
+          <Link to="/checkout">
+            <button className="btn">Checkout</button>
+          </Link>
+        </div>
+      ) : (
+        <h2>Your Shopping Basket is Empty</h2>
+      )}    
     </div>
   )
 }
