@@ -13,6 +13,7 @@ const getDefaultBasket = () => {
   return basket;
 };
 
+//Define state and everything related to logic in the project
 export const ShopContextProvider = (props) => {
   const [basketItems, setBasketItems] = useState(getDefaultBasket());
 
@@ -37,7 +38,7 @@ export const ShopContextProvider = (props) => {
     removeFromBasket,
     updateBasketItemCount,
   }
-  //Here we define state and everything related to logic in the project
+  
   console.log(basketItems);
   return (
     
