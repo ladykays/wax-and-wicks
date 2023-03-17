@@ -1,15 +1,26 @@
 .navbar {
   @apply
-    flex 
-    justify-between 
-    items-center p-6 
-    text-amber-900 
     bg-orange-50
+    p-6
 }
+
+.navbarItems {
+  @apply
+    flex 
+    items-center 
+    justify-between
+    xl:max-w-7xl 
+    xl:mx-auto 
+    text-amber-900
+}
+
+/* .links {
+  @apply  hidden md:flex items-center space-x-10 w-auto
+} */
 
 .link {
   @apply
-    mr-8 
+    /* mr-8  */
     hover:text-amber-600
 }
 
