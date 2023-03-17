@@ -18,7 +18,7 @@ export const Product = (props) => {
           {name}
         </h3>
       </div>
-      <p className="text-sm font-medium text-gray-900">{price}</p>
+      <p className="text-sm font-medium text-gray-900">£{price}</p>
       </div>
       <button className="addToBasketBtn ml-2 px-3 py-1 rounded-md text-white" onClick={() => addToBasket(id)}>
         {/* Display basketItemAmount only if basketItemAmount is greater than 0 */}
