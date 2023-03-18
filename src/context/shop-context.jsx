@@ -28,7 +28,7 @@ const getTotalBasketAmt = () => {
       totalAmt += basketItems[item] * itemInfo.price
     }
   }
-  return totalAmt;
+  return totalAmt.toFixed(2);
 };
 
   //Add product to basket

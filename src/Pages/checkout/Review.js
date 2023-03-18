@@ -19,7 +19,7 @@ const payments = [
 
 export default function Review() {
   const { basketItems, getTotalBasketAmt } = React.useContext(ShopContext);
-  const totalAmt = getTotalBasketAmt().toFixed(2);
+  const totalAmt = getTotalBasketAmt();
 
   const basketContent = products
     .filter((product) => basketItems[product.id] !== 0)
