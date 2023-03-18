@@ -1,0 +1,55 @@
+.navbar {
+  @apply shadow-lg
+    bg-orange-50
+    p-6;
+}
+
+.navbarItems {
+  @apply flex 
+    items-center 
+    justify-between
+    xl:max-w-7xl 
+    xl:mx-auto 
+    text-amber-900
+    max-w-full 
+    px-[8%] 
+    flex-wrap 
+    w-full;
+}
+
+/* .links {
+  @apply  hidden md:flex items-center space-x-10 w-auto
+} */
+
+.navLinks {
+  @apply w-full 
+    lg:flex 
+    lg:items-center 
+    lg:w-auto 
+    space-x-10;
+}
+
+.menu {
+  @apply lg:hidden 
+    block 
+    h-6 
+    w-6 
+    cursor-pointer
+    hover:text-amber-600;
+}
+.link {
+  @apply /* mr-8  */
+    hover:text-amber-600
+    lg:px-5
+    py-2
+    w-auto
+    text-right
+    block;
+}
+
+.basketLink {
+  @apply mr-0;
+}
+.basketIcon {
+  @apply text-2xl;
+}
