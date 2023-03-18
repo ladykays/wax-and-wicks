@@ -1,0 +1,86 @@
+/* product.jsx file styles */
+.image {
+  @apply
+    h-full 
+    w-full 
+    object-cover 
+    object-center 
+    lg:h-full 
+    lg:w-full
+}
+.name {
+  @apply
+    text-sm 
+    text-gray-700
+}
+.price {
+  @apply
+   text-sm 
+   font-medium 
+   text-gray-900
+}
+.addToBasketBtn {
+  @apply
+    ml-2 
+    px-3 
+    py-1 
+    rounded-md 
+    text-white
+}
+
+/* shop.js file styles */
+.hero {
+  @apply
+  relative 
+  overflow-hidden 
+  bg-cover 
+  bg-no-repeat 
+  p-12 
+  text-center
+}
+.hero-text-container{
+  @apply
+  flex 
+  h-full 
+  items-center 
+  justify-center
+}
+.hero-text {
+  @apply
+    mb-4 
+    text-4xl 
+    font-semibold
+}
+.hand-made {
+  @apply
+    mb-6 
+    text-xl font-semibold
+}
+.products-container {
+  @apply
+    mx-auto 
+    max-w-2xl 
+    py-16 px-4 
+    sm:py-24 
+    sm:px-6 
+    lg:max-w-7xl 
+    lg:px-8
+}
+.title {
+  @apply
+    text-2xl 
+    font-bold 
+    tracking-tight
+  text-gray-900
+}
+.stock {
+  @apply
+    mt-6 
+    grid 
+    grid-cols-1 
+    gap-y-10 
+    gap-x-6 
+    sm:grid-cols-2 
+    lg:grid-cols-4 
+    xl:gap-x-8
+}
