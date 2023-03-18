@@ -70,7 +70,7 @@ export default function AddressForm() {
           <TextField
             id="state"
             name="state"
-            label="State/Province/Region"
+            label="County"
             fullWidth
             variant="standard"
           />
@@ -80,7 +80,7 @@ export default function AddressForm() {
             required
             id="zip"
             name="zip"
-            label="Zip / Postal code"
+            label="Post code"
             fullWidth
             autoComplete="shipping postal-code"
             variant="standard"
