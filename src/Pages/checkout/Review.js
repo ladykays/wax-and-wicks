@@ -5,9 +5,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Grid from "@mui/material/Grid";
 import { products } from "../../products";
-//import { Basket } from "../basket/basket";
 import { ShopContext } from "../../context/shop-context";
-
 
 const addresses = ["1 MUI Drive", "Reactville", "Anytown", "99999", "USA"];
 const payments = [
