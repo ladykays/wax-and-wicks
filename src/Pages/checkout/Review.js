@@ -4,8 +4,9 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Grid from '@mui/material/Grid';
+import { products } from "../../products";
 
-const products = [
+/* const products = [
   {
     name: 'Product 1',
     desc: 'A nice thing',
@@ -27,7 +28,7 @@ const products = [
     price: '$14.11',
   },
   { name: 'Shipping', desc: '', price: 'Free' },
-];
+]; */
 
 const addresses = ['1 MUI Drive', 'Reactville', 'Anytown', '99999', 'USA'];
 const payments = [
@@ -47,7 +48,7 @@ export default function Review() {
         {products.map((product) => (
           <ListItem key={product.name} sx={{ py: 1, px: 0 }}>
             <ListItemText primary={product.name} secondary={product.desc} />
-            <Typography variant="body2">{product.price}</Typography>
+            <Typography variant="body2">£{product.price}</Typography>
           </ListItem>
         ))}
 
