@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from "react";
 import CssBaseline from '@mui/material/CssBaseline';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -49,8 +50,13 @@ const theme = createTheme({
 
 export default function Checkout() {
   const [activeStep, setActiveStep] = React.useState(0);
+  const [orderNumber, setOrderNumber] = useState("");
 
   const handleNext = () => {
+    if (activeStep === steps.length - 1) {
+      const newOrderNumber = `#${Math.floor(Math.random() * 10000000)}`;
+      setOrderNumber(newOrderNumber);
+    }
     setActiveStep(activeStep + 1);
   };
 
@@ -90,7 +96,7 @@ export default function Checkout() {
                 Thank you for your order.
               </Typography>
               <Typography variant="subtitle1">
-                Your order number is #2001539. We have emailed your order
+                Your order number is {orderNumber}. We have emailed your order
                 confirmation, and will send you an update when your order has
                 shipped.
               </Typography>
