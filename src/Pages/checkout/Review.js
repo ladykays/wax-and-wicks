@@ -3,8 +3,10 @@ import Typography from '@mui/material/Typography';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import Grid from '@mui/material/Grid';
-import { products } from "../../products";
+import Grid from '@mui/material/Grid'; 
+import { products } from '../../products';
+//import { Basket } from "../basket/basket"; 
+import { ShopContext } from "../../context/shop-context";
 
 /* const products = [
   {
@@ -39,23 +41,29 @@ const payments = [
 ];
 
 export default function Review() {
+  const { basketItems, getTotalBasketAmt } = React.useContext(ShopContext);
+  const totalAmt = getTotalBasketAmt();
+
+  const basketContent = products.filter(product => basketItems[product.id] !== 0);
+
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
         Order summary
       </Typography>
       <List disablePadding>
-        {products.map((product) => (
-          <ListItem key={product.name} sx={{ py: 1, px: 0 }}>
-            <ListItemText primary={product.name} secondary={product.desc} />
-            <Typography variant="body2">{product.price}</Typography>
+        {basketContent.map((product) => (
+          <ListItem key={product.id}>
+            <ListItemText primary={product.name} />
+            <Typography variant="subtitle1">
+              £{product.price}
+            </Typography>
           </ListItem>
         ))}
-
         <ListItem sx={{ py: 1, px: 0 }}>
           <ListItemText primary="Total" />
           <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>
-            £34.06
+            £{totalAmt}
           </Typography>
         </ListItem>
       </List>
