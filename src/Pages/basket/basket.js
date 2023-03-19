@@ -5,12 +5,9 @@ import { ShopContext } from "../../context/shop-context";
 import { BasketItem } from "./basket-item";
 import "./basket.css";
 
-
 export const Basket = () => {
-
-  const { basketItems, getTotalBasketAmt} = useContext(ShopContext);
+  const { basketItems, getTotalBasketAmt } = useContext(ShopContext);
   const totalAmt = getTotalBasketAmt();
-
 
   return (
     <div className="basket">
@@ -23,8 +20,7 @@ export const Basket = () => {
           if (basketItems[product.id] !== 0) {
             return <BasketItem data={product} />;
           }
-          return null; // explicitly return null if condition is not met  
-          
+          return null; // explicitly return null if condition is not met
         })}
       </div>
 
@@ -40,7 +36,7 @@ export const Basket = () => {
         </div>
       ) : (
         <h2>Your Shopping Basket is Empty</h2>
-      )}    
+      )}
     </div>
-  )
-}
+  );
+};
