@@ -57,7 +57,7 @@ export const Contact = () => {
         <input name="name" onChange={handleChange} type="text" placeholder="Enter your Name" />
         <input name="email" onChange={handleChange} type="text" placeholder="Enter Email Address" />
         <textarea name="message" onChange={handleChange} placeholder="Enter your Message" cols="30" rows="10"></textarea>
-        <button>Submit</button>
+        <button className="addToBasketBtn">Submit</button>
       </form>
 
       {success && <p>Form submitted successfully!</p>}
