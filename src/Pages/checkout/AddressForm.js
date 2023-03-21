@@ -6,7 +6,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 
 
-export default function AddressForm({setAddress}) {
+export default function AddressForm({ setAddress }) {
   const [address, setAddressState] = React.useState({
     firstName: "",
     lastName: "",
@@ -40,6 +40,9 @@ export default function AddressForm({setAddress}) {
         <Grid item xs={12} sm={6}>
           <TextField
             required
+            type="text"
+            minLength="2"
+            maxLength="20"
             id="firstName"
             name="firstName"
             label="First name"
@@ -53,6 +56,9 @@ export default function AddressForm({setAddress}) {
         <Grid item xs={12} sm={6}>
           <TextField
             required
+            type="text"
+            minlength="2"
+            maxlength="20"
             id="lastName"
             name="lastName"
             label="Last name"
@@ -66,6 +72,9 @@ export default function AddressForm({setAddress}) {
         <Grid item xs={12}>
           <TextField
             required
+            type="text"
+            minlength="2"
+            maxlength="20"
             id="address1"
             name="address1"
             label="Address line 1"
@@ -78,6 +87,9 @@ export default function AddressForm({setAddress}) {
         </Grid>
         <Grid item xs={12}>
           <TextField
+            type="text"
+            minlength="2"
+            maxlength="20"
             id="address2"
             name="address2"
             label="Address line 2"
@@ -91,6 +103,9 @@ export default function AddressForm({setAddress}) {
         <Grid item xs={12} sm={6}>
           <TextField
             required
+            type="text"
+            minlength="2"
+            maxlength="20"
             id="city"
             name="city"
             label="City"
@@ -103,6 +118,9 @@ export default function AddressForm({setAddress}) {
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
+            type="text"
+            minlength="2"
+            maxlength="20"
             id="state"
             name="state"
             label="State/Province/Region"
@@ -115,6 +133,9 @@ export default function AddressForm({setAddress}) {
         <Grid item xs={12} sm={6}>
           <TextField
             required
+            type="text"
+            minlength="4"
+            maxlength="10"
             id="zip"
             name="zip"
             label="Zip / Postal code"
@@ -128,6 +149,9 @@ export default function AddressForm({setAddress}) {
         <Grid item xs={12} sm={6}>
           <TextField
             required
+            type="text"
+            minlength="3"
+            maxlength="20"
             id="country"
             name="country"
             label="Country"
