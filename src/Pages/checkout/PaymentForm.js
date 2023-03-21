@@ -5,21 +5,44 @@ import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 
-export default function PaymentForm() {
+export default function PaymentForm({setPayment}) {
+  const [payment, setPaymentState] = React.useState
+  ({
+    nameOnCard: "",
+    cardNumber: "",
+    expiryDate: "",
+    cvv: "",
+    rememberCard: false,
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setPaymentState({
+      ...payment,
+      [name]: value,
+    });
+  };
+
+  React.useEffect(() => {
+    setPayment(payment);
+  }, [payment, setPayment]);
+
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
-        Payment method
+        Payment Method
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
           <TextField
             required
-            id="cardName"
+            id="nameOnCard"
             label="Name on card"
             fullWidth
             autoComplete="cc-name"
             variant="standard"
+            value={payment.nameOnCard}
+            onChange={handleChange}
           />
         </Grid>
         <Grid item xs={12} md={6}>
@@ -30,16 +53,20 @@ export default function PaymentForm() {
             fullWidth
             autoComplete="cc-number"
             variant="standard"
+            value={payment.cardNumber}
+            onChange={handleChange}
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <TextField
             required
-            id="expDate"
+            id="expiryDate"
             label="Expiry date"
             fullWidth
             autoComplete="cc-exp"
             variant="standard"
+            value={payment.expiryDate}
+            onChange={handleChange}
           />
         </Grid>
         <Grid item xs={12} md={6}>
@@ -51,6 +78,8 @@ export default function PaymentForm() {
             fullWidth
             autoComplete="cc-csc"
             variant="standard"
+            value={payment.cvv}
+            onChange={handleChange}
           />
         </Grid>
         <Grid item xs={12}>
