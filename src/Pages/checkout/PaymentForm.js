@@ -5,9 +5,8 @@ import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 
-export default function PaymentForm({setPayment}) {
-  const [payment, setPaymentState] = React.useState
-  ({
+export default function PaymentForm({ setPayment }) {
+  const [payment, setPaymentState] = React.useState({
     nameOnCard: "",
     cardNumber: "",
     expiryDate: "",
@@ -37,6 +36,7 @@ export default function PaymentForm({setPayment}) {
           <TextField
             required
             id="nameOnCard"
+            name="nameOnCard"
             label="Name on card"
             fullWidth
             autoComplete="cc-name"
@@ -49,6 +49,7 @@ export default function PaymentForm({setPayment}) {
           <TextField
             required
             id="cardNumber"
+            name="cardNumber"
             label="Card number"
             fullWidth
             autoComplete="cc-number"
@@ -61,6 +62,7 @@ export default function PaymentForm({setPayment}) {
           <TextField
             required
             id="expiryDate"
+            name="expiryDate"
             label="Expiry date"
             fullWidth
             autoComplete="cc-exp"
@@ -73,6 +75,7 @@ export default function PaymentForm({setPayment}) {
           <TextField
             required
             id="cvv"
+            name="cvv"
             label="CVV"
             helperText="Last three digits on signature strip"
             fullWidth
