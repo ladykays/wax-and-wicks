@@ -5,4 +5,5 @@
 /* custom selectors */
 button {
   @apply p-2 bg-amber-900 text-orange-50 border-amber-900 rounded-full md:border-2 hover:bg-orange-400 hover:text-amber-900 transition ease-out duration-500 w-48 mt-4
+
 }
