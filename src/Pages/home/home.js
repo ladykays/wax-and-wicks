@@ -20,7 +20,7 @@ function HomePage() {
                 our collection today and indulge in the warmth and comfort of
                 Wax and Wicks.
               </p>
-              <Link to="/shop"> <button> Shop Now </button> </Link>
+              <Link to="/shop"> <button className="addToBasketBtn"> Shop Now </button> </Link>
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@ function HomePage() {
               <p className="text-white text-lg mb-8">
               Show your appreciation in the most luxurious way possible with our collection of exquisite thank-you gifts. Indulge your loved ones with our high-quality, handcrafted candles in a variety of alluring scents. Made with the finest ingredients, these candles will create an ambiance of sophistication and relaxation that is sure to impress. Shop now and give a gift that will be cherished and remembered for years to come.
               </p>
-              <Link to="/shop"> <button> Shop Now </button> </Link>
+              <Link to="/shop"> <button className="addToBasketBtn"> Shop Now </button> </Link>
             </div>
             <div className="order-1 md:order-2">
               <img src={require("../../assets/images/Image2.png")} alt="candle" className="w-full md:max-w-lg mx-auto rounded-md"/>
@@ -68,7 +68,7 @@ function HomePage() {
         <p className="text-white text-lg mb-8">
         Welcome friends and family to their new home with a unique and thoughtful housewarming gift from our collection. Our best-selling candles are the perfect way to warm up any new space with their beautiful scents and cozy glow.
         </p>
-        <Link to="/shop"> <button> Shop Now </button> </Link>      
+        <Link to="/shop"> <button className="addToBasketBtn"> Shop Now </button> </Link>      
         </div>
     </div>
   </div>
