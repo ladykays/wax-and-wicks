@@ -35,6 +35,9 @@ export default function PaymentForm({ setPayment }) {
         <Grid item xs={12} md={6}>
           <TextField
             required
+            type="text"
+            minlength="2"
+            maxlength="30"
             id="nameOnCard"
             name="nameOnCard"
             label="Name on card"
@@ -48,6 +51,9 @@ export default function PaymentForm({ setPayment }) {
         <Grid item xs={12} md={6}>
           <TextField
             required
+            type="text"
+            minlength="16"
+            maxlength="20"
             id="cardNumber"
             name="cardNumber"
             label="Card number"
@@ -61,9 +67,11 @@ export default function PaymentForm({ setPayment }) {
         <Grid item xs={12} md={6}>
           <TextField
             required
+            type="month"
+            min="2015-01"
             id="expiryDate"
             name="expiryDate"
-            label="Expiry date"
+            label=". . . . . . . . . .Expiry Date"
             fullWidth
             autoComplete="cc-exp"
             variant="standard"
@@ -74,6 +82,9 @@ export default function PaymentForm({ setPayment }) {
         <Grid item xs={12} md={6}>
           <TextField
             required
+            type="text"
+            minlength="2"
+            maxlength="30"
             id="cvv"
             name="cvv"
             label="CVV"
