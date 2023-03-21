@@ -32,18 +32,7 @@ import Review from "./Review";
 
 const steps = ["Shipping address", "Payment details", "Review your order"];
 
-function getStepContent(step) {
-  switch (step) {
-    case 0:
-      return <AddressForm />;
-    case 1:
-      return <PaymentForm />;
-    case 2:
-      return <Review />;
-    default:
-      throw new Error("Unknown step");
-  }
-}
+
 
 const theme = createTheme({
   palette: {
@@ -65,6 +54,8 @@ const theme = createTheme({
 export default function Checkout() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [orderNumber, setOrderNumber] = React.useState("");
+  const [address, setAddress] = React.useState({});
+  const [payment, setPayment] = React.useState({});
 
   const handleNext = () => {
     if (activeStep === steps.length - 1) {
@@ -77,6 +68,19 @@ export default function Checkout() {
   const handleBack = () => {
     setActiveStep(activeStep - 1);
   };
+
+  function getStepContent(step) {
+    switch (step) {
+      case 0:
+        return <AddressForm setAddress={setAddress} />;
+      case 1:
+        return <PaymentForm setPayment={setPayment} />;
+      case 2:
+        return <Review address={address} payment={payment} />;
+      default:
+        throw new Error("Unknown step");
+    }
+  }
 
   return (
     <ThemeProvider theme={theme}>
