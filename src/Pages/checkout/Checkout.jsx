@@ -1,53 +1,28 @@
 import * as React from "react";
-//import { useState } from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-//import Toolbar from '@mui/material/Toolbar';
 import Paper from "@mui/material/Paper";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import Button from "@mui/material/Button";
-//import Link from '@mui/material/Link';
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import AddressForm from "./AddressForm";
 import PaymentForm from "./PaymentForm";
 import Review from "./Review";
 
-/* function Copyright() {
-  return (
-     <Typography variant="body2" color="text.secondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography> 
-  );
-} */
-
 const steps = ["Shipping address", "Payment details", "Review your order"];
-
-
 
 const theme = createTheme({
   palette: {
     primary: {
-      //light: '#757ce8',
       main: "#783510",
       dark: "#fb923d",
       contrastText: "#fff",
     },
-    /* secondary: {
-      light: '#ff7961',
-      main: '#f44336',
-      dark: '#ba000d',
-      contrastText: '#000',
-    }, */
   },
 });
 
@@ -67,7 +42,23 @@ export default function Checkout() {
 
   const handleBack = () => {
     setActiveStep(activeStep - 1);
+
+    if (activeStep === 1) {
+      setPayment({});
+    }
   };
+  
+
+  // Define a function to check if the address is empty
+  const isAddressEmpty = () => {
+    const { firstName, lastName, address1, city, zip, country } = address;
+    return !firstName || !lastName || !address1 || !city || !zip || !country;
+  };
+  
+  const isPaymentEmpty = () => {
+    const { nameOnCard, cardNumber, expiryDate, cvv } = payment;
+    return !nameOnCard || !cardNumber || !expiryDate || !cvv;
+  };  
 
   function getStepContent(step) {
     switch (step) {
@@ -136,13 +127,22 @@ export default function Checkout() {
                   </Button>
                 )}
 
-                <Button
-                  variant="contained"
-                  onClick={handleNext}
-                  sx={{ mt: 3, ml: 1 }}
-                >
-                  {activeStep === steps.length - 1 ? "Place order" : "Next"}
-                </Button>
+<Button
+  variant="contained"
+  onClick={handleNext}
+  sx={{ mt: 3, ml: 1 }}
+  disabled={
+    (activeStep === 0 && isAddressEmpty()) ||
+    (activeStep === 1 && isPaymentEmpty())
+  }
+>
+  {activeStep === steps.length - 1 ? "Place order" : "Next"}
+</Button>
+
+
+
+
+
               </Box>
             </React.Fragment>
           )}
