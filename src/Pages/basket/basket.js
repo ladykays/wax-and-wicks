@@ -4,7 +4,7 @@ import { products } from "../../products";
 import { ShopContext } from "../../context/shop-context";
 import { BasketItem } from "./basket-item";
 import "./basket.css";
-
+// function to get TotalBasket amount from shopContext
 export const Basket = () => {
   const { basketItems, getTotalBasketAmt } = useContext(ShopContext);
   const totalAmt = getTotalBasketAmt();
@@ -28,22 +28,28 @@ export const Basket = () => {
         <div className="checkout flex sm:flex-row flex-col justify-center items-center mt-10 flex-wrap">
           <div>Total: £{totalAmt}</div>
           <Link to="/shop">
-            <button className="btn mr-4 m1-2 px-3 py-1 rounded-md text-white">Continue Shopping</button>
+            <button className="btn mr-4 m1-2 px-3 py-1 rounded-md text-white">
+              Continue Shopping
+            </button>
           </Link>
           <Link to="/checkout">
-            <button className="btn mr-4 m1-2 px-3 py-1 rounded-md text-white">Checkout</button>
+            <button className="btn mr-4 m1-2 px-3 py-1 rounded-md text-white">
+              Checkout
+            </button>
           </Link>
         </div>
       ) : (
         <div>
-        <h2 className="text-2xl font-normal text-gray-500">Your Shopping Basket is Empty</h2>
-        <Link to="/shop">
-        <button className="btn mr-4 m1-2 px-3 py-1 rounded-md text-white">Shop Now</button>
-        </Link>
+          <h2 className="text-2xl font-normal text-gray-500">
+            Your Shopping Basket is Empty
+          </h2>
+          <Link to="/shop">
+            <button className="btn mr-4 m1-2 px-3 py-1 rounded-md text-white">
+              Shop Now
+            </button>
+          </Link>
         </div>
       )}
     </div>
   );
 };
-
-
