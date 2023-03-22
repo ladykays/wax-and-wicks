@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-
+// function for payment form
 export default function PaymentForm({ setPayment }) {
   const [payment, setPaymentState] = React.useState({
     nameOnCard: "",
@@ -21,7 +21,7 @@ export default function PaymentForm({ setPayment }) {
       [name]: value,
     });
   };
-
+  // Use effect hook to set payment state
   React.useEffect(() => {
     setPayment(payment);
   }, [payment, setPayment]);
