@@ -83,12 +83,13 @@ function HomePage() {
             </p>
 {/* Best Sellers candles */}
 
+
   <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
     <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
       {/* This products function is looping throght the first 4 items  */}
     {products.slice(0, 4).map((product) => (
               <div key={product.id} className="group relative">
-        <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
+        <div className=" min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:aspect-none lg:h-80">
           <img src={product.imageSrc} alt={product.imageAlt} className="h-full w-object-cover object-center lg:h-full lg:w-full" />
         </div>
           <div className="mt-4 flex justify-between">
