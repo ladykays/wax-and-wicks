@@ -4,7 +4,7 @@ import { products } from "../../products";
 import { ShopContext } from "../../context/shop-context";
 import { BasketItem } from "./basket-item";
 import "./basket.css";
-
+// function to get TotalBasket amount from shopContext
 export const Basket = () => {
   const { basketItems, getTotalBasketAmt } = useContext(ShopContext);
   const totalAmt = getTotalBasketAmt();
