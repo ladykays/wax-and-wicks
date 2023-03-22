@@ -24,6 +24,7 @@ Our e-commerce website, Wax and Wicks, is designed to cater to candle enthusiast
 ![Screenshop of home page](./src/assets/images/home-screenshot.png)
 ![Screenshot of shop page](./src/assets/images/shop-screenshot.png)
 ![Screenshot of contact page](./src/assets/images/contact-screenshot.png)
+<img width="800" alt="Shopping basket" src="https://user-images.githubusercontent.com/117649696/227017359-6a80ec63-5707-4107-8641-68cc0aacc9e6.png">
 
 ## Link to deployed site<a name="link-to-deployed-site"></a>
 
