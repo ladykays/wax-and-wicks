@@ -9,7 +9,7 @@ export const BasketItem = (props) => {
 
   return (
     <div className="basketItem grid gap-1 flex justify-center">
-      <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
+      <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-98">
       <img className="image h-40 w-40 object-cover object-center lg:h-full lg:w-full" src={imageSrc} alt={imageAlt} />
       </div>
       <div className="t-4 flex justify-between">
