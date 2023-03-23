@@ -25,7 +25,8 @@ export const Shop = () => {
                 Indulge in the warmth and comfort of Wax and Wicks.
               </h2>
               <h4 className="hand-made">
-                Here you will find a range of hand-poured candles made with care and love
+                Here you will find a range of hand-poured candles made with care
+                and love
               </h4>
             </div>
           </div>
@@ -34,9 +35,7 @@ export const Shop = () => {
       <div className="bg-white">
         <div className="products-container">
           <div className="products">
-            <h2 className="title">
-              Check out our current candle range below
-            </h2>
+            <h2 className="title">Check out our current candle range below</h2>
             <div className="stock">
               {/* Map through every element in the products array and grab the data from each of them */}
               {products.map((product) => (
@@ -49,6 +48,3 @@ export const Shop = () => {
     </div>
   );
 };
-
-
-

@@ -1,20 +1,19 @@
 .bg-custGreen {
-background-color: #636D5C ;
+  background-color: #636d5c;
 }
 
 .bg-custCream {
-    background-color: #F2EBE1 ;
+  background-color: #f2ebe1;
 }
 
 .bg-custOrange {
-    background-color: #A75A38 ;
-    }
-    
-.bg-custTan {
-background-color: #C0A385 ;
+  background-color: #a75a38;
 }
 
-.text-custGreen{
-    color: #3a4135 ;
+.bg-custTan {
+  background-color: #c0a385;
 }
-    
+
+.text-custGreen {
+  color: #3a4135;
+}

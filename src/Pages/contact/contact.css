@@ -1,9 +1,8 @@
 .title {
-  @apply 
-    text-4xl 
+  @apply text-4xl 
     mt-8 
     mb-8 
-    text-gray-700
+    text-gray-700;
 }
 
 form {
