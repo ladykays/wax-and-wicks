@@ -1,10 +1,8 @@
 .input-field {
-    width: 20px;
-  }
+  width: 20px;
+}
 
-    .checkout {
-      flex-direction: column;
-      margin-bottom: 1rem;
-    }
-
-    
+.checkout {
+  flex-direction: column;
+  margin-bottom: 1rem;
+}

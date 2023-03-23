@@ -17,7 +17,7 @@ export const Contact = () => {
     setFormData({
       //spread all the previous formdata properties and update/overwrite the current property that the user is typing into
       ...formData,
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
     //console.log(event.target.value);
   };
@@ -25,43 +25,56 @@ export const Contact = () => {
   const handleFormSubmit = (event) => {
     event.preventDefault();
 
-    // const formData = new FormData(form);
-    // const object = Object.fromEntries(formData);
     const data = JSON.stringify(formData);
 
-      fetch('https://api.web3forms.com/submit', {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json',
-                  'Accept': 'application/json'
-              },
-              body: data
-          })
-            //When the message succeeds in sending, then this is called
-            .then(res => res.json()) 
-            .then(data => {
-              setSuccess(true);
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: data,
+    })
+      //When the message succeeds in sending, then this is called
+      .then((res) => res.json())
+      .then((data) => {
+        setSuccess(true);
 
-              setTimeout(() => {
-                setSuccess(false);
-              }, 3000);
-            })
-            .catch(err => console.log(err));
-  }; 
+        setTimeout(() => {
+          setSuccess(false);
+        }, 3000);
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
     <>
       <h1 className="title">Contact</h1>
 
       <form onSubmit={handleFormSubmit}>
-        <input name="name" onChange={handleChange} type="text" placeholder="Enter your Name" />
-        <input name="email" onChange={handleChange} type="text" placeholder="Enter Email Address" />
-        <textarea name="message" onChange={handleChange} placeholder="Enter your Message" cols="30" rows="10"></textarea>
+        <input
+          name="name"
+          onChange={handleChange}
+          type="text"
+          placeholder="Enter your Name"
+        />
+        <input
+          name="email"
+          onChange={handleChange}
+          type="text"
+          placeholder="Enter Email Address"
+        />
+        <textarea
+          name="message"
+          onChange={handleChange}
+          placeholder="Enter your Message"
+          cols="30"
+          rows="10"
+        ></textarea>
         <button className="addToBasketBtn">Submit</button>
       </form>
 
       {success && <p>Form submitted successfully!</p>}
-      
     </>
-  )
-}
+  );
+};

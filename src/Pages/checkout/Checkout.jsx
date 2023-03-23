@@ -47,18 +47,17 @@ export default function Checkout() {
       setPayment({});
     }
   };
-  
 
   // Define a function to check if the address is empty
   const isAddressEmpty = () => {
     const { firstName, lastName, address1, city, zip, country } = address;
     return !firstName || !lastName || !address1 || !city || !zip || !country;
   };
-  
+
   const isPaymentEmpty = () => {
     const { nameOnCard, cardNumber, expiryDate, cvv } = payment;
     return !nameOnCard || !cardNumber || !expiryDate || !cvv;
-  };  
+  };
 
   function getStepContent(step) {
     switch (step) {
@@ -84,13 +83,7 @@ export default function Checkout() {
           position: "relative",
           borderBottom: (t) => `1px solid ${t.palette.divider}`,
         }}
-      >
-        {/* <Toolbar>
-          <Typography variant="h6" color="inherit" noWrap>
-            Company name
-          </Typography>
-        </Toolbar> */}
-      </AppBar>
+      ></AppBar>
       <Container component="main" maxWidth="sm" sx={{ mb: 4 }}>
         <Paper
           variant="outlined"
@@ -127,27 +120,21 @@ export default function Checkout() {
                   </Button>
                 )}
 
-<Button
-  variant="contained"
-  onClick={handleNext}
-  sx={{ mt: 3, ml: 1 }}
-  disabled={
-    (activeStep === 0 && isAddressEmpty()) ||
-    (activeStep === 1 && isPaymentEmpty())
-  }
->
-  {activeStep === steps.length - 1 ? "Place order" : "Next"}
-</Button>
-
-
-
-
-
+                <Button
+                  variant="contained"
+                  onClick={handleNext}
+                  sx={{ mt: 3, ml: 1 }}
+                  disabled={
+                    (activeStep === 0 && isAddressEmpty()) ||
+                    (activeStep === 1 && isPaymentEmpty())
+                  }
+                >
+                  {activeStep === steps.length - 1 ? "Place order" : "Next"}
+                </Button>
               </Box>
             </React.Fragment>
           )}
         </Paper>
-        {/* <Copyright /> */}
       </Container>
     </ThemeProvider>
   );

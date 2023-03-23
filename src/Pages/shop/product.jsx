@@ -1,4 +1,3 @@
-//useContext is a hook that comes with React
 import React, { useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
 import "./shop.css";
@@ -14,21 +13,15 @@ export const Product = (props) => {
         <img className="image" src={imageSrc} alt={imageAlt} />
       </div>
       <div className="mt-4 flex justify-between">
-      <div>
-      <h3 className="name">
-          {name}
-        </h3>
-      </div>
-      <p className="price">£{price}</p>
+        <div>
+          <h3 className="name">{name}</h3>
+        </div>
+        <p className="price">£{price}</p>
       </div>
       <button className="addToBasketBtn" onClick={() => addToBasket(id)}>
         {/* Display basketItemAmount only if basketItemAmount is greater than 0 */}
         Add to Basket {basketItemAmount > 0 && <> ({basketItemAmount})</>}
       </button>
     </div>
-  )};
-  
-
-
-
-
+  );
+};
